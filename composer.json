@@ -1,0 +1,31 @@
+{
+    "name": "moviet/minily",
+    "keywords": ["minilify"],
+    "description": "A standalone bundle for larvel css and javascript files",
+    "license": "MIT",
+    "require": {
+        "php": ">=7.1"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^6.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "Moviet\\Minity\\": "src/Moviet/Minity/"
+        },
+        "classmap": [
+            "src/Moviet/Minity/Processors/"
+        ]
+    },
+    "minimum-stability": "stable",
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Moviet\\Minity\\MinilyServiceProvider"
+            ],
+            "aliases": {
+                "Minily": "Moviet\\Minity\\Facade"
+            }
+        }
+    }
+}
